@@ -17,16 +17,28 @@ the necessary flags.
 If you're building RAD from source, then do the following:
 
 ```sh
-git clone https://github.com/marovira/rad.git
-cd rad
-git clone https://github.com/marovira/rad_deps.git _deps
+git clone https://github.com/marovira/rad_deps.git
+cd rad_deps/<your-platform>
+
 cmake --preset=<preset-name> -DCMAKE_PREFIX_PATH=./_deps
 cd ./build
 cmake --build .
 ```
 
-If you're building a project that depends on RAD, do the same steps as before, changing
-the commands to clone RAD with the necessary steps for your project.
+Now extract the archives to a separate location. Once all the archives are extracted, then
+do:
+
+```sh
+git clone https://github.com/marovira/rad.git
+cd rad
+cmake -DCMAKE_PREFIX_PATH=<path-to-deps>
+cd ./build
+cmake --build .
+```
+
+Where `<path-to-deps>` is the path where you extracted the archives to. If you're building
+a project that depends on RAD, do the same steps as before, changing the commands to clone
+RAD with the necessary steps for your project.
 
 ## License
 
