@@ -5,9 +5,9 @@ dependencies for building RAD:
 
 | **Name** | **Version** |
 |----------|-------------|
-| ONNXRuntime | 1.16.0 |
-| OpenCV | 4.8.0 |
-| OneTBB | 2021.10.0 |
+| ONNXRuntime | 1.16.3 |
+| OpenCV | 4.9.0 |
+| OneTBB | 2021.11.0 |
 
 The goal is to facilitate the building of RAD by providing the pre-built dependencies with
 the necessary flags.
